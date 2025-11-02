@@ -34,10 +34,16 @@ app.use(bodyParser.json());
 
 // Database Configuration and Connection
 const db = require("./config/keys").mongoURI.trim();
+// Use options to avoid deprecation warnings and improve stability
 mongoose
-  .connect(db)
+  .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Mongo DB Connected."))
-  .catch(err => console.log(err));
+  .catch(err => {
+    console.error("MongoDB connection error:", err && err.message ? err.message : err);
+    // Mostrar stack para ajudar debug quando possível
+    if (err && err.stack) console.error(err.stack);
+    process.exit(1);
+  });
 
 // Passport Middleware
 app.use(passport.initialize());

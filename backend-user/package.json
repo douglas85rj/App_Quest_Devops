@@ -4,7 +4,7 @@
   "description": "QuestCode: for amazons and warriors",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
+    "start": "node server.js",
     "server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +16,7 @@
     "express": "^4.16.3",
     "gravatar": "^1.6.0",
     "jsonwebtoken": "^8.3.0",
-    "mongoose": "^5.2.10",
+  "mongoose": "^6.9.0",
     "morgan": "^1.9.1",
     "node-uuid": "^1.4.8",
     "passport": "^0.4.0",
