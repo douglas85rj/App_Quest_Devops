@@ -1,7 +1,5 @@
 # App_Quest_Devops
 
-README do repositório App_Quest_Devops — coleção de front- e backends usados no projeto.
-
 Este repositório contém três subprojetos principais:
 
 - `backend-scm/`  — serviços relacionados à integração com SCM/GitHub.
